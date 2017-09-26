@@ -65,7 +65,7 @@
       speed = _.SPEED_MAP[speedSetting];
     break;
     default:
-      if(/^\d+$/.test(speedSetting) && speedSetting > 0 && speedSetting <= 100){
+      if(/^\d+$/.test(speedSetting) && speedSetting > 0){
         speed = speedSetting;
       }else{
         speed = _.SPEED_MAP['default'];

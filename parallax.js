@@ -58,13 +58,10 @@
     var speedSetting = $(layer).data('speed') || $(layer).attr('[data-speed]');
     var speed;
 
-    switch(speedSetting){
-    case 'fast':
-    case 'default':
-    case 'slow':
+    if(_.SPEED_MAP[speedSetting]){
       speed = _.SPEED_MAP[speedSetting];
-    break;
-    default:
+    }else{
+      // force the speed to be valid
       if(/^\d+$/.test(speedSetting) && speedSetting > 0){
         speed = speedSetting;
       }else{

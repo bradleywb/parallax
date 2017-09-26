@@ -12,7 +12,7 @@
 
     _.SPEED_MAP = Object.freeze({
       'fast': 80,
-      'normal': 60,
+      'default': 60,
       'slow': 40
     });
 
@@ -60,12 +60,16 @@
 
     switch(speedSetting){
     case 'fast':
-    case 'normal':
+    case 'default':
     case 'slow':
       speed = _.SPEED_MAP[speedSetting];
     break;
     default:
-      speed = speedSetting;
+      if(/^\d+$/.test(speedSetting) && speedSetting > 0 && speedSetting <= 100){
+        speed = speedSetting;
+      }else{
+        speed = _.SPEED_MAP['default'];
+      }
     }
 
     return speed;

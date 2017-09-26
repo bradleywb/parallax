@@ -1,0 +1,12 @@
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+}
+
+.parallax-foreground {
+  position: relative;
+}

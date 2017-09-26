@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Scrolling</title>
+    <link rel="stylesheet" href="parallax.css"/>
+    <style>
+    .spacer {
+        height: 600px;
+    }
+    </style>
+</head>
+<body>
+    <div class="spacer"></div>
+    <div
+        data-parallax
+        class="parallax"
+        style="height: 600px;border:1px solid black;">
+
+        <div
+            data-parallax-layer
+            data-speed="20"
+            class="parallax-layer">
+
+            <img src="http://placekitten.com/g/600/600">
+        </div>
+
+        <div
+            data-parallax-layer
+            data-speed="normal"
+            class="parallax-layer">
+
+            <img src="http://placecage.com/c/400/400">
+        </div>
+
+        <div
+            data-parallax-layer
+            data-speed="fast"
+            class="parallax-layer">
+
+            <p>Cage on cats on cage on cats Cage on cats on cage on cats Cage on cats on cage on cats Cage on cats on cage on cats Cage on cats on cage on cats Cage on cats on cage on cats</p>
+        </div>
+        <div class="parallax-foreground">
+            <img src="http://placekitten.com/g/200/200">
+            <p>Some non-parallaxed content</p>
+        </div>
+    </div>
+    <div class="spacer"></div>
+
+    <script
+        src="https://code.jquery.com/jquery-1.11.2.min.js"
+        integrity="sha256-Ls0pXSlb7AYs7evhd+VLnWsZ/AqEHcXBeMZUycz/CcA="
+        crossorigin="anonymous"></script>
+
+    <script src="parallax.js"></script>
+</body>
+</html>
